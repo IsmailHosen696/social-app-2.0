@@ -14,9 +14,9 @@ export default function CreatePost() {
                 </div>
                 <input type="text " className='flex-1 rounded-full text-sm outline-none border-gray-100 bg-gray-100 px-5 py-2' placeholder="What's on your mind, john ?" readOnly />
             </div>
-            <div className='grid grid-cols-2 w-full py-1'>
-                <button className='w-full hover:bg-gray-100 py-1 px-2 flex items-center justify-center gap-2 rounded'><VideoCameraIcon className='w-6 h-6' />Video</button>
-                <button className='w-full hover:bg-gray-100 py-1 px-2 flex items-center justify-center gap-2 rounded'><CameraIcon className='w-6 h-6' />Photo</button>
+            <div className='grid grid-cols-2 w-full pt-2'>
+                <button className='w-full hover:bg-gray-100 py-2 px-2 flex items-center justify-center gap-2 rounded'><VideoCameraIcon className='w-6 h-6' />Video</button>
+                <button className='w-full hover:bg-gray-100 py-2 px-2 flex items-center justify-center gap-2 rounded'><CameraIcon className='w-6 h-6' />Photo</button>
             </div>
         </div>
     )

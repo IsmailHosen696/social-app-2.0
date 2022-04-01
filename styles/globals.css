@@ -32,8 +32,7 @@ body {
   @apply w-9 h-9;
 }
 .postcontainer {
-  max-width: 600px;
-  width: 100%;
+  @apply flex-1;
 }
 .postSclass {
   @apply w-full p-3;
