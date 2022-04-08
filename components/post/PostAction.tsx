@@ -1,7 +1,7 @@
 import { AnnotationIcon, HeartIcon } from '@heroicons/react/outline'
 import React from 'react'
 
-export default function PostAction() {
+export default function PostAction({ likes }: { likes: string[] }) {
     return (
         <div className='w-full flex flex-col gap-3 items-start pb-2'>
             <div className='w-full flex gap-5 items-center'>

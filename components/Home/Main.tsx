@@ -11,11 +11,13 @@ export default function Main() {
                     <div className='w-full'>
                         <CreatePost />
                     </div>
-                    <div className='w-full mt-5'>
+                    <div className='w-full mt-5 mb-28'>
                         <Posts />
                     </div>
                 </div>
-                <Sidebar />
+                <div className='w-auto md:block hidden'>
+                    <Sidebar />
+                </div>
             </div>
         </div>
     )

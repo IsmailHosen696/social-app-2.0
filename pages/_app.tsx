@@ -1,6 +1,6 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
-import { Navbar } from '../components/navbar'
+import { BottomBar, Navbar } from '../components/navbar'
 import { Fragment } from 'react'
 import { useRouter } from 'next/router'
 
@@ -12,7 +12,12 @@ function MyApp({ Component, pageProps }: AppProps) {
         router.pathname.includes("auth") ?
           null
           :
-          <Navbar />
+          <Fragment>
+            <Navbar />
+            <div className='block md:hidden'>
+              <BottomBar />
+            </div>
+          </Fragment>
       }
       <Component {...pageProps} />
     </Fragment>
