@@ -3,6 +3,7 @@ import type { AppProps } from 'next/app'
 import { BottomBar, Navbar } from '../components/navbar'
 import { Fragment } from 'react'
 import { useRouter } from 'next/router'
+import { ClickContextProvider } from '../contexts/useClick'
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -19,7 +20,9 @@ function MyApp({ Component, pageProps }: AppProps) {
             </div>
           </Fragment>
       }
-      <Component {...pageProps} />
+      <ClickContextProvider>
+        <Component {...pageProps} />
+      </ClickContextProvider>
     </Fragment>
   )
 }

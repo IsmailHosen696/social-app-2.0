@@ -1,14 +1,15 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react'
+import useClick, { Actions } from '../../contexts/useClick';
 import { routeType } from './NavLinks';
 
 export default function LinkIcon({ Icon, to, size, url, title, ActiveIcon }: routeType) {
-    const [isClicked, setIsClicked] = useState(false);
+    const { dispatch, state: { isNotificationOpen } } = useClick();
     return (
         title === "Notifications" ?
-            <button onClick={() => setIsClicked(!isClicked)}>
-                {isClicked ? ActiveIcon && <ActiveIcon className={"icon " + size} /> : Icon && <Icon className={"icon " + size} />}
+            <button onClick={() => dispatch({ type: Actions.TOOGLE_NOTIFICATION_BAR })}>
+                {isNotificationOpen ? ActiveIcon && <ActiveIcon className={"icon " + size} /> : Icon && <Icon className={"icon " + size} />}
             </button>
             :
             <Link href={to}>

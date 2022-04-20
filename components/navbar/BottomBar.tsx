@@ -45,7 +45,7 @@ export const routes: routeType[] = [
 ]
 export default function BottomBar() {
     return (
-        <div className='w-full bg-white flex items-center justify-between z-40 p-2 h-16 px-2 fixed bottom-0'>
+        <div className='w-full bg-white border-t flex items-center justify-between z-40 p-2 h-16 px-4 fixed bottom-0'>
             {
                 routes.map((route, i) =>
                     <LinkIcon key={i} title={route.title} size={route.size} Icon={route.Icon} to={route.to} />
